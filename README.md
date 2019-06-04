@@ -17,7 +17,7 @@ The pipeline included:
 * Downloading the audio files from the server
 
   `download_data.py`
-* Pre-processing each file to create an spectrogram and storing the processed samples in a database
+* Pre-processing each file to create an [spectrogram](https://en.wikipedia.org/wiki/Spectrogram) and storing the processed samples in a [HDF5](https://www.hdfgroup.org/solutions/hdf5/) database
 
   `create_db.py` and `create_sp_db.py`
 * Implementing and training the Neural Networks
