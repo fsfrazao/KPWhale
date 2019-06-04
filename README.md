@@ -15,8 +15,15 @@ I chose two tasks:
 
 The pipeline included:
 * Downloading the audio files from the server
+
+  `download_data.py`
 * Pre-processing each file to create an spectrogram and storing the processed samples in a database
+
+  `create_db.py` and `create_sp_db.py`
 * Implementing and training the Neural Networks
+
+  `ResNet_sp.py` and `siamese_cnn_ind_kw.py`
+  
 
 
 
