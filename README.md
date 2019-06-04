@@ -1,7 +1,7 @@
 # KPWhale
 
 
-This project was implemented as a proof of concept to demonstrate the utility of deep neural network model to a bioacoustic lab.
+This project was implemented as a proof of concept to demonstrate the utility of deep neural networks models to a bioacoustic lab. Unfortunately, I'm not able to share the data, but the code is under GPLv3.
 
 They had a collection of 15,000 audio clips in the their server. Each clip was approximately 3 seconds long and contained the sound produced by either a Killer Whale or Pilot Whale (a "call"). Each call was associated with one individual whale, which had and unique id.
 
