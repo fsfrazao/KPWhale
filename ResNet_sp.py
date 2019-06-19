@@ -243,7 +243,7 @@ if __name__ == "__main__":
 
 
     train_generator = BatchGenerator(train_table, 128, transform_batch, y_field="sp", shuffle=True, refresh_on_epoch_end=True )
-    val_generator = BatchGenerator(test_table, 128, transform_batch, y_field="sp",  shuffle=True, refresh_on_epoch_end=True )
+    val_generator = BatchGenerator(val_table, 128, transform_batch, y_field="sp",  shuffle=True, refresh_on_epoch_end=True )
     test_generator = BatchGenerator(train_table, 128, transform_batch, y_field="sp", shuffle=True, refresh_on_epoch_end=True )
 
 
