@@ -1,16 +1,16 @@
 # KPWhale
 
 
-This project was implemented as a proof of concept to demonstrate the utility of deep neural networks models to a bioacoustic lab. Unfortunately, I'm not able to share the data, but the code is under GPLv3.
+This project was implemented as a proof of concept to demonstrate the utility of deep neural networks models to a bioacoustics lab. Unfortunately, I'm not able to share the data, but the code is under GPLv3.
 
-They had a collection of 15,000 audio clips in the their server. Each clip was approximately 3 seconds long and contained the sound produced by either a Killer Whale or Pilot Whale (a "call"). Each call was associated with one individual whale, which had and unique id.
+They had a collection of 15,000 audio clips in AWS buckets server. Each clip was approximately 3 seconds long and contained the sound (or "call") produced by either a Killer Whale or Pilot Whale. Each call was also associated with individual whales, which had an unique id.
 
 ![killer whale](_static/killer_whale.png "Killer Whale")  ![pilot whale](_static/pilot_whale.png "Pilot Whale")
 
 I chose two tasks:
 
 1) To distinguish between Pilot and Killer whales (using a ResNet) and
-2) To match determine wether 2 killer whale calls were produced by the same individual (using a siamese CNN)
+2) To determine whether 2 killer whale calls were produced by the same individual (using a siamese CNN)
 
 
 The pipeline included:
@@ -23,6 +23,9 @@ The pipeline included:
 * Implementing and training the Neural Networks
 
   `ResNet_sp.py` and `siamese_cnn_ind_kw.py`
+  
+`batch_gen.py` contains two classes to read data from the HDF5 database and serve it in batches to the neural networks.
+These classes are very handy when dealing with large amounts of data. Since HDF5 databases are quite efficient to read from and query, this is a good way of only bringing one batch at a time to memory.
   
 
 
